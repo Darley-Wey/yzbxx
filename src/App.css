@@ -1,5 +1,21 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: linear-gradient(45deg, #FFFEFF 0%, #D7FFFE 99%, #D7FFFE 100%);
+}
+
+.w-120{
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -14,14 +30,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /*background-color:  #258F83 ;*/
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
