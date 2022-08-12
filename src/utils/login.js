@@ -12,7 +12,7 @@ async function login(values) {
         data: values,
         responseType: "blob"
     })
-    //console.log(res.headers)
+    // 返回为验证码，渲染验证码
     if (String(res.data.type) === "image/jpeg") {
         let url = URL.createObjectURL(res.data)
         ReactDOM.render(<Captcha visiable={true} captcha={url} data={values} />, document.getElementById('captcha'))
@@ -23,7 +23,7 @@ async function login(values) {
             let text = String(ev.target.result)
             console.log(text)
             //var text = (new Response(result)).text();
-            //console.log(text)
+            // 登录成功，使用登录信息提交爬虫任务
             if (text === 'success') {
                 values.project = 'crawler'
                 values.spider = 'score'
@@ -33,6 +33,7 @@ async function login(values) {
                     params: values
                 }).then(res => {
                     let status = res.data.status
+                    // 成功提交爬虫任务
                     if (status === 'ok') {
                         Success()
                     } else if (status === 'error') {

@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.eslintcache
+/.idea/deployment.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/statistic.xml
+/.idea/vcs.xml
+/.idea/webServers.xml

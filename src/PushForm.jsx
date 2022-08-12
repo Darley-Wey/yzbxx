@@ -16,6 +16,7 @@ function PushForm() {
         labelCol: {span: 8},
         wrapperCol: {span: 6},
     };
+
     const tailLayout = {
         wrapperCol: {
             xs: {
@@ -26,6 +27,7 @@ function PushForm() {
             },
         },
     };
+
     return (
         <Form
             {...layout}
@@ -60,11 +62,6 @@ function PushForm() {
                 </Button>
             </Form.Item>
             <Form.Item {...tailLayout}>
-                {/* <Button type="primary" htmlType="button" onClick={() => {
-                    render(<SearchForm />, document.getElementById('body'))
-                }}>
-                    进入排名系统
-                </Button>*/}
                 <Button type="primary" htmlType="button" href={'/search'}>
                     进入排名系统
                 </Button>

@@ -15,68 +15,9 @@ function Push(props) {
             <div className={'pt-10'}>
                     <PushForm />
                     <div id='captcha'/>
-                {/*<div id={'login-form'} onChange={LoginForm}></div>*/}
-                {/*<Space direction={"vertical"} className={"w-72 text-xl text-black text-left leading-8"}>
-                    //<img src={logo} className="App-logo" alt="logo" />
-                    <p className={" "}>请输入研招网账号：<Input onChange={updateField} name={"username"}
-                                                              value={form.username} placeholder={"帐号"} /></p>
-                    <p className={""}>请输入研招网密码：<Input.Password
-                        iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-                        onChange={updateField} name={"password"} value={form.password} placeholder={"密码"} /></p></Space>*/}
-                {/*<p><Button onClick={() => {
-                    submit();
-                    printValues()
-                }}>提交成绩信息</Button></p>
-                {/*子组件向父组件通信*/}
-                {/*        <div> this message is from Child:{this.state.date}
-        <Children handleChange={this.handleClick}/></div>*/}
-                {/* <p>you click {count} times</p>
-                    <Button onClick={() => setState(count + 1)}>Click me</Button>*/}
             </div>
-
         </div>
     );
 }
 
 export default Push;
-
-/*const printValues = () => {
-      /!* e.preventDefault();*!/
-      console.log(form.username, form.password);
-  };
-  const updateField = e => {
-      setUser({
-          ...form,
-          [e.target.name]: e.target.value
-      });
-  };
-
-
-  function submit() {
-      let url = `http://34.96.201.183:7068/schedule.json?project=crawler&spider=score&username=${form.username}&password=${form.password}`;
-      fetch(url,)
-          .then(res => {
-              return res.json()
-          })
-          .then(
-              (result) => {
-                  setIsLoaded(true);
-                  setItems(result);
-                  let status = result['status']
-                  if (status == 'ok') {
-                      alert('登记成功')
-                  } else if (status = 'error') {
-                      ReactDOM.render(<Success />, document.getElementById('main'))
-                      //Success();
-                  }
-              },
-              // 注意：需要在此处处理错误
-              // 而不是使用 catch() 去捕获错误
-              // 因为使用 catch 去捕获异常会掩盖掉组件本身可能产生的 bug
-              (error) => {
-                  setIsLoaded(true);
-                  setError(error);
-                  console.log(errors)
-              }
-          )
-  }*/

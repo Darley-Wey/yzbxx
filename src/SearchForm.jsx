@@ -90,7 +90,7 @@ function SearchForm(props) {
             </Form>
         </div>
     );
-};
+}
 
 const columns = [
     {
@@ -100,6 +100,33 @@ const columns = [
     {
         title: '专业',
         dataIndex: 'major',
+        filters: [
+            {
+                text: 'Joe',
+                value: 'Joe',
+            },
+            {
+                text: 'Jim',
+                value: 'Jim',
+            },
+            {
+                text: 'Submenu',
+                value: 'Submenu',
+                children: [
+                    {
+                        text: 'Green',
+                        value: 'Green',
+                    },
+                    {
+                        text: 'Black',
+                        value: 'Black',
+                    },
+                ],
+            },
+        ],
+        // specify the condition of filtering result
+        // here is that finding the name started with `value`
+        onFilter: (value, record) => record.name.indexOf(value) === 0,
         responsive: ['sm']
     },
     {
@@ -158,32 +185,5 @@ function onChange(pagination, filters, sorter, extra) {
     console.log('params', pagination, filters, sorter, extra);
 }
 
-/*function ResultTable(values) {
-    const [data, setData] = useState({})
-    axios({
-        url: '/result',
-        method: 'post',
-        data: values
-    }).then(res => {
-            console.log(res.headers['Content-Type'])
-            if (res.headers['Content-Type'] === 'application/json') {
-                let data = res.data
-                console.log(res.data)
-                window.location.href = 'result'
-                /!* ReactDOM.render(<Table columns={columns} dataSource={data}
-                                        onChange={onChange} />, document.getElementById('body'));*!/
-                /!*return <Table columns={columns} dataSource={data}
-                              onChange={onChange} />*!/
-            } else {
-                Fail()
-            }
-        }
-    )
-    console.log('Success:', values);
-
-    return (
-        <Table columns={columns} dataSource={data}
-               onChange={onChange} />)
-}*/
 
 export default SearchForm
